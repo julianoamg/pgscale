@@ -6,7 +6,7 @@ import (
 
 var RootCmd = &cobra.Command{
 	Use:   "pgscale",
-	Short: "Step-by-step cli tool help assistant for Postgres scaling issues",
+	Short: "Step-by-step cli tool help assistant for Postgres scaling tasks",
 }
 
 func Execute() {

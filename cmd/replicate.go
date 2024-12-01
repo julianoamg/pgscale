@@ -14,16 +14,9 @@ var replicateCmd = &cobra.Command{
 }
 
 func runReplicate(cmd *cobra.Command, args []string) {
-	master, _ := core.GetConfig(args[0])
-	masterSSH, _ := core.GetConfig(args[0], "ssh")
+	masterSSH := core.GetConfig(args[0], "ssh")
+	fmt.Println(masterSSH["identity"])
 
-	replica, _ := core.GetConfig(args[0])
-	replicaSSH, _ := core.GetConfig(args[0], "ssh")
-
-	fmt.Println(master)
-	fmt.Println(masterSSH)
-	fmt.Println(replica)
-	fmt.Println(replicaSSH)
 }
 
 func init() {
